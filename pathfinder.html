@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pathfinder.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathFinder|SkillsWrap</title>
+</head>
+<body>
+<!-- TOP NAVIGATION -->
+ <header class="pathfinder-navbar">
+<div class="logo">Skills <span class="black">Wrap</span></div>
+<div class="logo2">Path<span class="blacker">Finder</span></div>
+ </header>
+
+<!-- QUESTIONERS -->
+<main class="pathfinder-container">
+<section class="pathfinder-intro">
+<p class="eyebrow">YOUR FUTURE STARTS HERE</p>
+<h1>Discover Your Career Path </h1>
+<p>Let's discover which technology careers could suit your interest and strengths</p>
+</section>
+
+<!-- PROGRESS INDICATOR -->
+<section class="question-progress">
+    <div class="progress-info">
+        <span>YOUR JOURNEY</span>
+        <span>QUESTIONS 1 OF 8</span>
+    </div>
+<div class="progress-track">
+    <div class="progresss-fill"></div>
+</div>
+</section>
+    <!-- FIRST QUESTION -->
+<form id="pathfinder-form">
+    <fieldset class="question-card">
+        <legend>Which area interest you most?</legend>
+        <p class="question-description"> Choose the option that feels right for you.</p>
+        <div class="answer-option">
+            <label class="answer-option">
+                <input type="radio" name="interest" value="web">
+                <span class="answer-content">
+                    <span class="answer-title">Building websites</span>
+                    <span class="answer-description">Creating interactive web pages.</span>
+                </span>
+            </label>
+            <label class="answer-option">
+                <input type="radio" name="interest" value="software">
+                <span class="answer-content">
+                    <span class="answer-title">Creating softwareand apps</span>
+                    <span class="answer-description">Solving problems through code.</span>
+                </span>
+            </label>
+            <label  class="answer-option">
+                <input type="radio" name="interest" value="data">
+                <span class="answer-content">
+                    <span class="answer-title">Analysing data</span>
+                    <span class="answer-description">Discovering patterns and insights</span>
+                </span>
+            </label>
+            <label  class="answer-option">
+                <input type="radio" name="interest" value="data">
+                <span class="answer-content">
+                    <span class="answer-title">CyberSecurity</span>
+                    <span class="answer-description">Protecting systems and information</span>
+                </span>
+            </label>
+        </div>
+    </fieldset>
+<div class="question-nav">
+    <span class="step-caption">Step 1 of your journey</span>
+    <button type="button" id="next-qn" class="primary-but">Next</button>
+</div>
+</form>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>
