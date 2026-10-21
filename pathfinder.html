@@ -10,15 +10,10 @@
 <body>
 <!-- TOP NAVIGATION -->
  <header class="pathfinder-navbar">
-<<<<<<< HEAD
-<div class="logo">Skills <span class="black">Wrap</span></div>
-<div class="logo2">Path<span class="blacker">Finder</span></div>
-=======
     <div class="nav-logos">
 <div class="logo">Skills <span class="black">Wrap</span></div>
 <div class="logo2">Path<span class="blacker">Finder</span></div>
 </div>
->>>>>>> ed42537 (made questioners for pathfinder)
  </header>
 
 <!-- QUESTIONERS -->
@@ -33,17 +28,10 @@
 <section class="question-progress">
     <div class="progress-info">
         <span>YOUR JOURNEY</span>
-<<<<<<< HEAD
-        <span>QUESTIONS 1 OF 8</span>
-    </div>
-<div class="progress-track">
-    <div class="progresss-fill"></div>
-=======
         <span id="question-counter">QUESTIONS 1 OF 8</span>
     </div>
 <div class="progress-track">
-    <div class="progress-fill"></div>
->>>>>>> ed42537 (made questioners for pathfinder)
+    <div class="progress-fill" id="progress-fill"></div>
 </div>
 </section>
     <!-- FIRST QUESTION -->
@@ -51,11 +39,7 @@
     <fieldset class="question-card">
         <legend>Which area interest you most?</legend>
         <p class="question-description"> Choose the option that feels right for you.</p>
-<<<<<<< HEAD
-        <div class="answer-option">
-=======
         <div class="option-grid">
->>>>>>> ed42537 (made questioners for pathfinder)
             <label class="answer-option">
                 <input type="radio" name="interest" value="web">
                 <span class="answer-content">
@@ -66,16 +50,10 @@
             <label class="answer-option">
                 <input type="radio" name="interest" value="software">
                 <span class="answer-content">
-<<<<<<< HEAD
-                    <span class="answer-title">Creating softwareand apps</span>
-                    <span class="answer-description">Solving problems through code.</span>
-                </span>
-=======
                     <span class="answer-title">Creating software and apps</span>
                     <span class="answer-description">Solving problems through code.</span>
                 </span>
 
->>>>>>> ed42537 (made questioners for pathfinder)
             </label>
             <label  class="answer-option">
                 <input type="radio" name="interest" value="data">
@@ -85,11 +63,7 @@
                 </span>
             </label>
             <label  class="answer-option">
-<<<<<<< HEAD
-                <input type="radio" name="interest" value="data">
-=======
                 <input type="radio" name="interest" value="cyber">
->>>>>>> ed42537 (made questioners for pathfinder)
                 <span class="answer-content">
                     <span class="answer-title">CyberSecurity</span>
                     <span class="answer-description">Protecting systems and information</span>
@@ -97,11 +71,6 @@
             </label>
         </div>
     </fieldset>
-<<<<<<< HEAD
-<div class="question-nav">
-    <span class="step-caption">Step 1 of your journey</span>
-    <button type="button" id="next-qn" class="primary-but">Next</button>
-=======
     <!-- QUESTION TWO -->
     <fieldset class="question-card" hidden>
         <legend>What kind of problems do you enjoy solving?</legend>
@@ -435,11 +404,13 @@
         </label>
         </div>
 </fieldset>
-
+<!-- NAVIGATIONS BUTTON -->
 <div class="question-nav">
     <span class="step-caption">Step 1 of your journey</span>
-    <button type="button" id="next-qn" class="primary-but">Next</button>    
->>>>>>> ed42537 (made questioners for pathfinder)
+    <div class="nav-button">
+    <button type="button" id="back-qn" class="secondary-but">Back</button>
+    <button type="button" id="next-qn" class="primary-but">Next</button>
+    </div>    
 </div>
 </form>
 </main>

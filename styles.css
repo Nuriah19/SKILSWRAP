@@ -35,11 +35,7 @@ body{
 }
 /* LOGO */
 .logo{
-<<<<<<< HEAD
-    font-size: 80px;
-=======
-    font-size: 40px;
->>>>>>> ed42537 (made questioners for pathfinder)
+    font-size: 50px;
     font-weight: bold;
     text-decoration: none;
     font-family: "Astoria",sans-serif;
