@@ -94,6 +94,9 @@ return matches.slice(0,3)
         
             // CALCULATING AND SAVING MATCHES
             const matches=calculateCareerMatches();
+            // GRT THE USER'S NAME
+            const userName=localStorage.getItem("userName") || localStorage.getItem("fullName") || "there"
+            const formattedName=userName.charAt(0).toUpperCase()+userName.slice(1)
             // HIDE QUIZ CARD AND PROGRESS BAR
                const form=document.getElementById("pathfinder-form")
             if(form)form.style.display="none"
@@ -108,7 +111,7 @@ return matches.slice(0,3)
                 resultsContainer.innerHTML=`
                 <div class="question-card" style="text-align:center">
                 <p class="eyebrow" style="color:#2dd4bf;font-size:1.8rem; font-weight:600;letter-spacing:2px;margin-bottom:8px;">YOUR MATCHES ARE IN!</p>
-                <h1 style="font-size:2rem; color:#f0eaff;margin-bottom:8px;">Your Recommended Career Path</h1>
+                <h1 style="font-size:2rem; color:#f0eaff;margin-bottom:8px;">${formattedName},Your Recommended Career Path</h1>
                 <p class="question-description">Based on your interest, here are your top  matches:</p>
                 <div class="results-list" style="display:flex;flex-direction:column; gap:15px;margin-top:20px">
                 ${matches.map((match,idx)=>`
