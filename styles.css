@@ -382,3 +382,39 @@ label{
 .links:hover{
     text-decoration: underline;
 }
+/* SIGNUP AND LOGIN NAVS */
+.navbar2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom:1px solid #44365C;
+    margin-bottom: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+/* FOOTER */
+.footer2{
+      padding:20px;
+    background-color: #17132a;
+    text-align: center;
+}
+.navbar3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom:1px solid #44365C;
+    margin-bottom: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.footer3{
+      padding:20px;
+    background-color: #17132a;
+    text-align: center;
+}
