@@ -47,14 +47,25 @@
         data:0,
         cyber:0
     }
-    // DISPLAY OF RESULTS
-const careerNames={
-    web:"Web Developer",
-    software:"Software Engineer",
-    data:"Data Analyst",
-    cyber:"Cybersecurity Analyst",
-}
-
+    // IMAGES
+    const careerDetails={
+        web:{
+            name:"Web Development",
+            image:"images/web-developer.png"
+        },
+        software:{
+            name:"Software Engineer",
+            image:"images/sofware-engineer.png"
+        },
+        data:{
+            name:"Data Analyst",
+            image:"images/data-analyst.png"
+        },
+        cyber:{
+            name:"Cybersecurity Analyst",
+            image:"images/cyber-security.png"
+        }
+    }
     // READS THE SELECTED ANSWER FROM EVERY QEUSTIONS
     questions.forEach(function(question){
         const selected=question.querySelector(`input[type="radio"]:checked`)
@@ -65,7 +76,8 @@ const careerNames={
     // CONVERT SCORES TO AN ARRAY AND SORT
 let matches=Object.entries(scores).map(([id,score])=>({
     id:id,
-    name:careerNames[id],
+    name:careerDetails[id].name,
+    image:careerDetails[id].image,
     score:score,
 }))
 // SORT HIGHEST SCORE FIRST
@@ -75,6 +87,15 @@ localStorage.setItem("pathFinderAnswers",JSON.stringify(scores))
 localStorage.setItem("pathFinderResults",JSON.stringify(matches.slice(0,3)))
 return matches.slice(0,3)
 }
+    // DISPLAY OF RESULTS
+const careerNames={
+    web:"Web Developer",
+    software:"Software Engineer",
+    data:"Data Analyst",
+    cyber:"Cybersecurity Analyst",
+}
+
+    
 
     // GO TO THE NEXT QUESTIONS
     if(nextButton){
@@ -94,7 +115,7 @@ return matches.slice(0,3)
         
             // CALCULATING AND SAVING MATCHES
             const matches=calculateCareerMatches();
-            // GRT THE USER'S NAME
+            // GET THE USER'S NAME
             const userName=localStorage.getItem("userName") || localStorage.getItem("fullName") || "there"
             const formattedName=userName.charAt(0).toUpperCase()+userName.slice(1)
             // HIDE QUIZ CARD AND PROGRESS BAR
@@ -115,10 +136,13 @@ return matches.slice(0,3)
                 <p class="question-description">Based on your interest, here are your top  matches:</p>
                 <div class="results-list" style="display:flex;flex-direction:column; gap:15px;margin-top:20px">
                 ${matches.map((match,idx)=>`
-                    <div class="answer-option" style="display:flex; justify-content:space-between;align-items:center;">
-                    <div class="answer-content" style="text-align:left;">
-                    <span class="answer=title">${idx+1}.${match.name}</span>
+                    <div class="answer-option" style="display:flex; justify-content:space-between;align-items:center; gap:15px 200px">
+                    // <div class="answer-content" style="text-align:left;">
+                    <div style="display:flex; align-items:center; gap:15px; text-align:left;">
+                    <img src="${match.image}" alt="${match.name}" style="width:55px; height:55px;border-radius:5px; object-fit:cover; border:1px solid #2dd4bf; flex-shrink:0;"/>
+                    <span class="answer=title" style="display:block; font-weight:700; color:#f0eaff; font-size:1.05rem;">${idx+1}.${match.name}</span>
                     <span class="answer-description">Match level based on your skills preference</span>
+                    </div>
                     </div>
                     <span style="background:#2dd4bf;color:#111827;padding:6px 14px; border-radius:20px; font-weight:700; font-size:0.85rem">Top Match</span>
                       </div>
@@ -146,9 +170,12 @@ return matches.slice(0,3)
 
 // CONNECTING THE SIGN UP FORM WITH PATHFINDER
 const signupForm=document.querySelector("#signup-form")
+if (signupForm){
 signupForm.addEventListener("submit",function(event){
     event.preventDefault()
     window.location.href="pathfinder.html"
 })
+}
+
 
 
